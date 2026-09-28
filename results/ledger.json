@@ -1,7 +1,7 @@
 [
   {
     "block": "map/01-data/01-action-space-unification",
-    "generated_at_unix": 1790611167,
+    "generated_at_unix": 1790611245,
     "git_rev": "uncommitted",
     "metrics": {
       "action_noise_sigma": 0.02,
@@ -35,7 +35,7 @@
   },
   {
     "block": "map/02-representation/01-lift-splat-shoot",
-    "generated_at_unix": 1790611168,
+    "generated_at_unix": 1790611246,
     "git_rev": "uncommitted",
     "metrics": {
       "best_cell_iou_soft": 0.7143,
@@ -98,7 +98,7 @@
   },
   {
     "block": "map/02-representation/02-temporal-necessity",
-    "generated_at_unix": 1790611169,
+    "generated_at_unix": 1790611247,
     "git_rev": "uncommitted",
     "metrics": {
       "best_k": 8,
@@ -131,7 +131,7 @@
   },
   {
     "block": "map/03-decision/01-frequency-mismatch",
-    "generated_at_unix": 1790611169,
+    "generated_at_unix": 1790611247,
     "git_rev": "uncommitted",
     "metrics": {
       "ctrl_hz": 1000,
@@ -160,7 +160,7 @@
   },
   {
     "block": "map/03-decision/02-flow-matching",
-    "generated_at_unix": 1790611179,
+    "generated_at_unix": 1790611258,
     "git_rev": "uncommitted",
     "metrics": {
       "batch": 256,
@@ -219,7 +219,7 @@
   },
   {
     "block": "map/03-decision/03-ar-token",
-    "generated_at_unix": 1790611180,
+    "generated_at_unix": 1790611259,
     "git_rev": "uncommitted",
     "metrics": {
       "abs_measured_over_law_at_N16": 1.2868,
@@ -282,7 +282,7 @@
   },
   {
     "block": "map/03-decision/04-rtc",
-    "generated_at_unix": 1790611180,
+    "generated_at_unix": 1790611259,
     "git_rev": "uncommitted",
     "metrics": {
       "async_peak_jerk": 6962.05,
@@ -380,7 +380,7 @@
   },
   {
     "block": "map/04-execution/02-ipc-cost",
-    "generated_at_unix": 1790611203,
+    "generated_at_unix": 1790611259,
     "git_rev": "uncommitted",
     "metrics": {
       "box_fields": 7,
@@ -449,7 +449,7 @@
   },
   {
     "block": "map/05-deployment/01-quantization",
-    "generated_at_unix": 1790611204,
+    "generated_at_unix": 1790611260,
     "git_rev": "uncommitted",
     "metrics": {
       "action_mae_int4_pct": 21.926431,
@@ -513,7 +513,7 @@
   },
   {
     "block": "map/05-deployment/02-latency-gap",
-    "generated_at_unix": 1790611205,
+    "generated_at_unix": 1790611261,
     "git_rev": "uncommitted",
     "metrics": {
       "amp": 1.0,
@@ -557,7 +557,7 @@
   },
   {
     "block": "map/06-evaluation/01-statistical-power",
-    "generated_at_unix": 1790611205,
+    "generated_at_unix": 1790611261,
     "git_rev": "uncommitted",
     "metrics": {
       "ci_halfwidth_pp_at_N20": 18.67,
@@ -581,7 +581,7 @@
   },
   {
     "block": "map/06-evaluation/02-benchmark-gaming",
-    "generated_at_unix": 1790611205,
+    "generated_at_unix": 1790611262,
     "git_rev": "uncommitted",
     "metrics": {
       "chance_acc": 0.1667,
@@ -610,7 +610,7 @@
   },
   {
     "block": "map/07-feedback/01-advantage-conditioning",
-    "generated_at_unix": 1790611206,
+    "generated_at_unix": 1790611263,
     "git_rev": "uncommitted",
     "metrics": {
       "adv_noise": 0.4,

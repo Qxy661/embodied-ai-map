@@ -1,0 +1,12 @@
+# The map is developed on Windows and gated on Linux CI.  Without this, a checkout
+# on one platform can leave the other's tooling (ruff format --check especially)
+# reporting differences that have nothing to do with the code.
+* text=auto eol=lf
+
+# results.json is the audit trail the READMEs are checked against.  Keep it byte-stable
+# across platforms so a diff means the measurement changed, not the line endings.
+*.json text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf

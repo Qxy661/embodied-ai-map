@@ -1,7 +1,7 @@
 {
   "block": "map/03-decision/03-ar-token",
-  "generated_at_unix": 1790611259,
-  "git_rev": "uncommitted",
+  "generated_at_unix": 1790611342,
+  "git_rev": "96c06aa",
   "metrics": {
     "abs_measured_over_law_at_N16": 1.2868,
     "abs_measured_over_law_at_N256": 1.09,

@@ -1,7 +1,7 @@
 {
   "block": "map/07-feedback/01-advantage-conditioning",
-  "generated_at_unix": 1790611263,
-  "git_rev": "uncommitted",
+  "generated_at_unix": 1790611364,
+  "git_rev": "96c06aa",
   "metrics": {
     "adv_noise": 0.4,
     "awr_effective_sample_pct": 21.22,

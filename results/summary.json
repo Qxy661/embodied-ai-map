@@ -3,69 +3,74 @@
     {
       "block": "01-data/01-action-space-unification",
       "ok": true,
-      "seconds": 0.451
+      "seconds": 0.289
     },
     {
       "block": "02-representation/01-lift-splat-shoot",
       "ok": true,
-      "seconds": 1.335
+      "seconds": 1.516
     },
     {
       "block": "02-representation/02-temporal-necessity",
       "ok": true,
-      "seconds": 0.284
+      "seconds": 0.237
     },
     {
       "block": "03-decision/01-frequency-mismatch",
       "ok": true,
-      "seconds": 0.322
+      "seconds": 0.203
     },
     {
       "block": "03-decision/02-flow-matching",
       "ok": true,
-      "seconds": 11.043
+      "seconds": 10.931
     },
     {
       "block": "03-decision/03-ar-token",
       "ok": true,
-      "seconds": 0.445
+      "seconds": 0.455
     },
     {
       "block": "03-decision/04-rtc",
       "ok": true,
-      "seconds": 0.452
+      "seconds": 0.182
+    },
+    {
+      "block": "04-execution/01-jitter-budget",
+      "ok": true,
+      "seconds": 18.952
     },
     {
       "block": "04-execution/02-ipc-cost",
       "ok": true,
-      "seconds": 0.319
+      "seconds": 0.524
     },
     {
       "block": "05-deployment/01-quantization",
       "ok": true,
-      "seconds": 0.601
+      "seconds": 0.486
     },
     {
       "block": "05-deployment/02-latency-gap",
       "ok": true,
-      "seconds": 0.784
+      "seconds": 0.757
     },
     {
       "block": "06-evaluation/01-statistical-power",
       "ok": true,
-      "seconds": 0.336
+      "seconds": 0.365
     },
     {
       "block": "06-evaluation/02-benchmark-gaming",
       "ok": true,
-      "seconds": 0.695
+      "seconds": 0.172
     },
     {
       "block": "07-feedback/01-advantage-conditioning",
       "ok": true,
-      "seconds": 1.249
+      "seconds": 0.713
     }
   ],
   "failed": [],
-  "total_seconds": 18.318
+  "total_seconds": 35.786
 }

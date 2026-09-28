@@ -1,7 +1,7 @@
 {
   "block": "map/05-deployment/01-quantization",
-  "generated_at_unix": 1790611260,
-  "git_rev": "uncommitted",
+  "generated_at_unix": 1790611362,
+  "git_rev": "96c06aa",
   "metrics": {
     "action_mae_int4_pct": 21.926431,
     "action_mae_int4_per_tensor_pct": 24.821339,

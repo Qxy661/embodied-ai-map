@@ -1,8 +1,8 @@
 [
   {
     "block": "map/01-data/01-action-space-unification",
-    "generated_at_unix": 1790611245,
-    "git_rev": "uncommitted",
+    "generated_at_unix": 1790611328,
+    "git_rev": "96c06aa",
     "metrics": {
       "action_noise_sigma": 0.02,
       "bins_per_dim": 256,
@@ -35,8 +35,8 @@
   },
   {
     "block": "map/02-representation/01-lift-splat-shoot",
-    "generated_at_unix": 1790611246,
-    "git_rev": "uncommitted",
+    "generated_at_unix": 1790611330,
+    "git_rev": "96c06aa",
     "metrics": {
       "best_cell_iou_soft": 0.7143,
       "best_cell_m": 0.8,
@@ -98,8 +98,8 @@
   },
   {
     "block": "map/02-representation/02-temporal-necessity",
-    "generated_at_unix": 1790611247,
-    "git_rev": "uncommitted",
+    "generated_at_unix": 1790611330,
+    "git_rev": "96c06aa",
     "metrics": {
       "best_k": 8,
       "cell_m": 0.5,
@@ -131,8 +131,8 @@
   },
   {
     "block": "map/03-decision/01-frequency-mismatch",
-    "generated_at_unix": 1790611247,
-    "git_rev": "uncommitted",
+    "generated_at_unix": 1790611330,
+    "git_rev": "96c06aa",
     "metrics": {
       "ctrl_hz": 1000,
       "ctrl_obs_ratio": 33.333,
@@ -160,8 +160,8 @@
   },
   {
     "block": "map/03-decision/02-flow-matching",
-    "generated_at_unix": 1790611258,
-    "git_rev": "uncommitted",
+    "generated_at_unix": 1790611341,
+    "git_rev": "96c06aa",
     "metrics": {
       "batch": 256,
       "center_offset": 1.5,
@@ -219,8 +219,8 @@
   },
   {
     "block": "map/03-decision/03-ar-token",
-    "generated_at_unix": 1790611259,
-    "git_rev": "uncommitted",
+    "generated_at_unix": 1790611342,
+    "git_rev": "96c06aa",
     "metrics": {
       "abs_measured_over_law_at_N16": 1.2868,
       "abs_measured_over_law_at_N256": 1.09,
@@ -282,8 +282,8 @@
   },
   {
     "block": "map/03-decision/04-rtc",
-    "generated_at_unix": 1790611259,
-    "git_rev": "uncommitted",
+    "generated_at_unix": 1790611342,
+    "git_rev": "96c06aa",
     "metrics": {
       "async_peak_jerk": 6962.05,
       "async_rms_jerk": 948.89,
@@ -341,37 +341,37 @@
   },
   {
     "block": "map/04-execution/01-jitter-budget",
-    "generated_at_unix": 1790611203,
-    "git_rev": "uncommitted",
+    "generated_at_unix": 1790611361,
+    "git_rev": "96c06aa",
     "metrics": {
-      "contention_sleep_p99_blowup": 90.3,
+      "contention_sleep_p99_blowup": 71.1,
       "jitter_budget_us": 100.0,
       "n_contenders": 8,
       "n_samples_pooled": 3600,
       "n_ticks_per_pass": 1200,
-      "obf_ratio": 5.6,
+      "obf_ratio": 26.2,
       "obf_ratio_floor": 2,
-      "obf_ratio_median_of_passes": 54.9,
-      "p50_ratio": 1826.0,
+      "obf_ratio_median_of_passes": 75.6,
+      "p50_ratio": 1674.0,
       "p50_ratio_floor": 1000,
       "p99_rank_from_worst": 12,
-      "p99_ratio_max": 109.61,
-      "p99_ratio_min": 0.14,
+      "p99_ratio_max": 147.74,
+      "p99_ratio_min": 0.11,
       "p99_ratio_swing_floor": 3,
       "period_us": 1000.0,
       "repeats": 3,
-      "sleep_contended_over_budget_frac": 0.9978,
-      "sleep_contended_p50_us": 45283.46,
-      "sleep_contended_p99_us": 301801.36,
-      "sleep_idle_over_budget_frac": 0.8256,
-      "sleep_idle_p50_us": 292.16,
-      "sleep_idle_p99_us_median_of_passes": 2989.58,
-      "spin_contended_over_budget_frac": 0.8886,
-      "spin_contended_p50_over_sleep": 1.96,
-      "spin_contended_p50_us": 88563.47,
-      "spin_idle_over_budget_frac": 0.1464,
-      "spin_idle_p50_us": 0.16,
-      "spin_idle_p99_us_median_of_passes": 331.12
+      "sleep_contended_over_budget_frac": 0.9981,
+      "sleep_contended_p50_us": 50701.33,
+      "sleep_contended_p99_us": 275921.96,
+      "sleep_idle_over_budget_frac": 0.8222,
+      "sleep_idle_p50_us": 284.58,
+      "sleep_idle_p99_us_median_of_passes": 986.06,
+      "spin_contended_over_budget_frac": 0.8908,
+      "spin_contended_p50_over_sleep": 1.65,
+      "spin_contended_p50_us": 83480.05,
+      "spin_idle_over_budget_frac": 0.0314,
+      "spin_idle_p50_us": 0.17,
+      "spin_idle_p99_us_median_of_passes": 126.48
     },
     "n_metrics": 28,
     "n_tables": 1,
@@ -380,8 +380,8 @@
   },
   {
     "block": "map/04-execution/02-ipc-cost",
-    "generated_at_unix": 1790611259,
-    "git_rev": "uncommitted",
+    "generated_at_unix": 1790611361,
+    "git_rev": "96c06aa",
     "metrics": {
       "box_fields": 7,
       "copies_loaned": 0,
@@ -449,8 +449,8 @@
   },
   {
     "block": "map/05-deployment/01-quantization",
-    "generated_at_unix": 1790611260,
-    "git_rev": "uncommitted",
+    "generated_at_unix": 1790611362,
+    "git_rev": "96c06aa",
     "metrics": {
       "action_mae_int4_pct": 21.926431,
       "action_mae_int4_per_tensor_pct": 24.821339,
@@ -513,8 +513,8 @@
   },
   {
     "block": "map/05-deployment/02-latency-gap",
-    "generated_at_unix": 1790611261,
-    "git_rev": "uncommitted",
+    "generated_at_unix": 1790611363,
+    "git_rev": "96c06aa",
     "metrics": {
       "amp": 1.0,
       "analytic_max_dev": 0.001108,
@@ -557,8 +557,8 @@
   },
   {
     "block": "map/06-evaluation/01-statistical-power",
-    "generated_at_unix": 1790611261,
-    "git_rev": "uncommitted",
+    "generated_at_unix": 1790611363,
+    "git_rev": "96c06aa",
     "metrics": {
       "ci_halfwidth_pp_at_N20": 18.67,
       "ci_halfwidth_pp_at_N500": 4.0,
@@ -581,8 +581,8 @@
   },
   {
     "block": "map/06-evaluation/02-benchmark-gaming",
-    "generated_at_unix": 1790611262,
-    "git_rev": "uncommitted",
+    "generated_at_unix": 1790611363,
+    "git_rev": "96c06aa",
     "metrics": {
       "chance_acc": 0.1667,
       "generalist_new_color_acc": 0.19,
@@ -610,8 +610,8 @@
   },
   {
     "block": "map/07-feedback/01-advantage-conditioning",
-    "generated_at_unix": 1790611263,
-    "git_rev": "uncommitted",
+    "generated_at_unix": 1790611364,
+    "git_rev": "96c06aa",
     "metrics": {
       "adv_noise": 0.4,
       "awr_effective_sample_pct": 21.22,

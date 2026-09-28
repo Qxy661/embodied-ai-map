@@ -1,7 +1,7 @@
 {
   "block": "map/03-decision/02-flow-matching",
-  "generated_at_unix": 1790611258,
-  "git_rev": "uncommitted",
+  "generated_at_unix": 1790611341,
+  "git_rev": "96c06aa",
   "metrics": {
     "batch": 256,
     "center_offset": 1.5,

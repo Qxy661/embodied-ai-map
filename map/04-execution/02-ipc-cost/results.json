@@ -1,7 +1,7 @@
 {
   "block": "map/04-execution/02-ipc-cost",
-  "generated_at_unix": 1790611259,
-  "git_rev": "uncommitted",
+  "generated_at_unix": 1790611361,
+  "git_rev": "96c06aa",
   "metrics": {
     "box_fields": 7,
     "copies_loaned": 0,

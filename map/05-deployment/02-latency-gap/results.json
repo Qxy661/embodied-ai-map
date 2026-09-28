@@ -1,7 +1,7 @@
 {
   "block": "map/05-deployment/02-latency-gap",
-  "generated_at_unix": 1790611261,
-  "git_rev": "uncommitted",
+  "generated_at_unix": 1790611363,
+  "git_rev": "96c06aa",
   "metrics": {
     "amp": 1.0,
     "analytic_max_dev": 0.001108,

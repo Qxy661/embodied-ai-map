@@ -1,7 +1,7 @@
 {
   "block": "map/06-evaluation/01-statistical-power",
-  "generated_at_unix": 1790611261,
-  "git_rev": "uncommitted",
+  "generated_at_unix": 1790611363,
+  "git_rev": "96c06aa",
   "metrics": {
     "ci_halfwidth_pp_at_N20": 18.67,
     "ci_halfwidth_pp_at_N500": 4.0,

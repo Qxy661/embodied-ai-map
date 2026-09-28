@@ -1,7 +1,7 @@
 {
   "block": "map/02-representation/01-lift-splat-shoot",
-  "generated_at_unix": 1790611246,
-  "git_rev": "uncommitted",
+  "generated_at_unix": 1790611330,
+  "git_rev": "96c06aa",
   "metrics": {
     "best_cell_iou_soft": 0.7143,
     "best_cell_m": 0.8,

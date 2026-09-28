@@ -1,7 +1,7 @@
 {
   "block": "map/06-evaluation/02-benchmark-gaming",
-  "generated_at_unix": 1790611262,
-  "git_rev": "uncommitted",
+  "generated_at_unix": 1790611363,
+  "git_rev": "96c06aa",
   "metrics": {
     "chance_acc": 0.1667,
     "generalist_new_color_acc": 0.19,

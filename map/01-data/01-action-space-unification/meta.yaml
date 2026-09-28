@@ -1,0 +1,15 @@
+block: 01-data/01-action-space-unification
+title: 统一动作空间：跨本体预训练的前提
+tier: primary          # primary | secondary | watch
+engagement: self       # self | depend | adapter | cite
+ring: 01-data
+
+# Which settled convention this block leans on, if any.
+standards:
+  - "Open X-Embodiment / RT-X 的 per-dataset action normalization"
+  - "LeRobot dataset 约定：action / state 每维独立归一化 + 维度补齐"
+
+# Numbers that appear in README prose but are structural, not results.
+literals:
+  - 0     # "第 0 步" 在脉络段，是修辞不是结果
+  - 3     # 三台机器人，正文用汉字「三」，表格里才落成数字

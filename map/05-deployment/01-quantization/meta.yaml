@@ -1,0 +1,19 @@
+block: 05-deployment/01-quantization
+title: 量化：体积是确定的，延迟不是
+tier: primary          # 判据：不上板就没法部署
+engagement: self       # 本块自己算，不依赖别人的数
+ring: 05-deployment
+
+# Which settled convention this block leans on, if any.
+standards:
+  - "ONNX Runtime quantization: dynamic vs static QDQ, per-channel weight scales"
+  - "GPTQ / AWQ / SmoothQuant -- post-training quantization for the weight-only case"
+
+# Numbers that appear in README prose but are structural, not results.
+#
+# Deliberately empty.  Everything this block's prose cites -- shapes, batch sizes,
+# bit widths, the hardware constants -- is a value run.py computed and wrote down,
+# so it belongs in results.json rather than in an exemption list.  A `literals:`
+# entry here would be a promise the checker cannot verify; there is no such promise
+# in this block.
+literals: []

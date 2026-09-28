@@ -1,0 +1,47 @@
+{
+  "block": "map/06-evaluation/02-benchmark-gaming",
+  "generated_at_unix": 1790611262,
+  "git_rev": "uncommitted",
+  "metrics": {
+    "chance_acc": 0.1667,
+    "generalist_new_color_acc": 0.19,
+    "generalist_scene_shift_acc": 1.0,
+    "generalist_scene_shift_drop_pp": 0.0,
+    "generalist_std_acc": 1.0,
+    "generalist_table_entries": 6,
+    "label_noise": 0.1,
+    "n_colors": 6,
+    "n_tasks": 24,
+    "n_test_per_task": 40,
+    "n_train_per_task": 60,
+    "probe_new_color_acc": 0.1867,
+    "probe_scene_shift_acc": 0.1667,
+    "probe_scene_shift_drop_pp": 83.33,
+    "probe_std_acc": 1.0,
+    "probe_table_entries": 24,
+    "std_gap_pp": 0.0,
+    "tasks_per_color": 4
+  },
+  "numpy": "2.5.3",
+  "python": "3.12.10",
+  "seed": 0,
+  "tables": {
+    "splits": [
+      {
+        "generalist": 1.0,
+        "probe": 1.0,
+        "split": "\u6807\u51c6\u57fa\u51c6"
+      },
+      {
+        "generalist": 1.0,
+        "probe": 0.1667,
+        "split": "\u573a\u666f\u66ff\u6362"
+      },
+      {
+        "generalist": 0.19,
+        "probe": 0.1867,
+        "split": "\u76ee\u6807\u66ff\u6362"
+      }
+    ]
+  }
+}

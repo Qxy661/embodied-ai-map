@@ -1,0 +1,16 @@
+block: 02-representation/01-lift-splat-shoot
+title: "LSS：多相机怎么倒进一张俯视图"
+tier: primary          # primary | secondary | watch
+engagement: self       # self | depend | adapter | cite
+ring: 02-representation
+
+# Which settled convention this block leans on, if any.
+standards:
+  - "LSS (ECCV 2020) 的 lift-splat 结构与 32 个深度 bin"
+  - "BEV 网格 0.1 m / 20 m 见方，BEVDet、BEVFormer 系列沿用"
+
+# Numbers that appear in README prose but are setup, not results.
+literals:
+  - 160    # image width, px
+  - 120    # image height, px
+  - 100    # focal length fx = fy, px

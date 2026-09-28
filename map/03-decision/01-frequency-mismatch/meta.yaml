@@ -1,0 +1,17 @@
+block: 03-decision/01-frequency-mismatch
+title: 频率错配与动作分块
+tier: primary          # primary | secondary | watch
+engagement: self       # self | depend | adapter | cite
+ring: 03-decision
+
+# Which settled convention this block leans on, if any.
+standards:
+  - "LeRobot RTCConfig / ACT action chunking (chunk_size, execution_horizon)"
+
+# Numbers that appear in README prose but are structural, not results.
+literals:
+  - 30     # observation rate, named in the title of the mismatch
+  - 1000   # servo rate, same
+  - 50     # H=50, the industrial default we discuss
+  - 10     # 10 integration steps, quoted from pi0
+  - 3      # three "stations" in the walkthrough narrative

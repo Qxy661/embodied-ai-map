@@ -1,0 +1,20 @@
+block: 04-execution/02-ipc-cost
+title: 拆进程的代价：模块边界的带宽预算
+tier: primary          # primary | secondary | watch
+engagement: self       # self | depend | adapter | cite
+ring: 04-execution
+
+# Which settled conventions this block leans on.  The copy counts in run.py are a
+# model of these designs, not a measurement of any one implementation of them.
+standards:
+  - "POSIX 共享内存（/dev/shm）与 Python multiprocessing.shared_memory"
+  - "ROS 2 intra-process communication + loaned messages（进程内零拷贝）"
+  - "DDS 零拷贝与共享内存传输（Fast DDS / Cyclone DDS 的 loaned sample）"
+  - "控制进程侧：SCHED_FIFO + 核隔离（与 04-01 同一套配方）"
+
+# This block runs no timing at all -- every metric is a product of declared
+# constants, so the same inputs give the same numbers on any machine.  It is
+# therefore NOT volatile, and check_numbers.py checks it exactly, sweep table
+# included.  04-01 owns the live measurement in this ring.
+literals:
+  - 1      # 「1 kHz」里的 1：给一个约定俗成的环频命名，不是本块算出来的量

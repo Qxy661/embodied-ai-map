@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Note: results/ and every block's results.json ARE committed on purpose.  They are
+# the audit trail every README cites, and scripts/check_numbers.py reads them back.
+# Nothing here excludes them -- do not add a rule that does.

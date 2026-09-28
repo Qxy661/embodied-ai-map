@@ -1,0 +1,186 @@
+{
+  "block": "map/03-decision/04-rtc",
+  "generated_at_unix": 1790611259,
+  "git_rev": "uncommitted",
+  "metrics": {
+    "async_peak_jerk": 6962.05,
+    "async_rms_jerk": 948.89,
+    "async_rms_pct": 9.5652,
+    "blend_long_jerk": 34.49,
+    "blend_long_ms": 40.0,
+    "blend_longest_rms": 13.2848,
+    "blend_ms": 25.0,
+    "blend_overlong_jerk": 3069.29,
+    "blend_overlong_ms": 80.0,
+    "blend_short_jerk": 1368.29,
+    "blend_short_ms": 4.0,
+    "blend_shortest_rms": 9.991,
+    "chunk_ms": 50.0,
+    "chunk_ticks": 50,
+    "ctrl_hz": 1000,
+    "duration_s": 4.0,
+    "floor_peak_jerk": 3216.15,
+    "floor_rms_pct": 6.591,
+    "index_offset": 40,
+    "index_offset_ms": 40.0,
+    "infer_ms": 20.0,
+    "infer_ticks": 20,
+    "jerk_at_p_dead": 2740.53,
+    "jerk_at_p_max": 85.52,
+    "jerk_cut": 90.85,
+    "lag_ms": 20.0,
+    "lag_ticks": 20,
+    "lead_ms": 20.0,
+    "lead_ticks": 20,
+    "p_dead_max": 30,
+    "p_min": 40,
+    "p_min_ms": 40.0,
+    "prefix_track_cost": 1.212,
+    "rms_at_p_dead": 9.9798,
+    "rms_at_p_max": 14.3287,
+    "rtc_peak_jerk": 76.63,
+    "rtc_rms_jerk": 21.31,
+    "rtc_rms_pct": 11.8221,
+    "rtc_track_cost": 1.236,
+    "sigma_s": 0.02,
+    "sigma_v": 0.15,
+    "sync_peak_jerk": 9745.18,
+    "sync_period_ms": 70.0,
+    "sync_rms_pct": 12.5853,
+    "sync_stall_pct": 28.57,
+    "target_a": 1.0,
+    "target_f_hz": 1.0,
+    "trigger_hz": 20.0
+  },
+  "numpy": "2.5.3",
+  "python": "3.12.10",
+  "seed": 0,
+  "tables": {
+    "blend_sweep": [
+      {
+        "blend_ms": 4.0,
+        "fits_in_chunk": true,
+        "peak_jerk": 1368.29,
+        "rms_jerk": 239.47,
+        "rms_pct": 9.991
+      },
+      {
+        "blend_ms": 8.0,
+        "fits_in_chunk": true,
+        "peak_jerk": 530.41,
+        "rms_jerk": 98.37,
+        "rms_pct": 10.3214
+      },
+      {
+        "blend_ms": 15.0,
+        "fits_in_chunk": true,
+        "peak_jerk": 185.06,
+        "rms_jerk": 42.16,
+        "rms_pct": 10.92
+      },
+      {
+        "blend_ms": 25.0,
+        "fits_in_chunk": true,
+        "peak_jerk": 76.63,
+        "rms_jerk": 21.31,
+        "rms_pct": 11.8221
+      },
+      {
+        "blend_ms": 40.0,
+        "fits_in_chunk": true,
+        "peak_jerk": 34.49,
+        "rms_jerk": 11.64,
+        "rms_pct": 13.2848
+      },
+      {
+        "blend_ms": 80.0,
+        "fits_in_chunk": false,
+        "peak_jerk": 3069.29,
+        "rms_jerk": 399.0,
+        "rms_pct": 17.1849
+      }
+    ],
+    "policies": [
+      {
+        "peak_jerk": 3216.15,
+        "policy": "floor",
+        "rms_jerk": 641.12,
+        "rms_pct": 6.591
+      },
+      {
+        "peak_jerk": 9745.18,
+        "policy": "sync",
+        "rms_jerk": 1134.36,
+        "rms_pct": 12.5853
+      },
+      {
+        "peak_jerk": 6962.05,
+        "policy": "async",
+        "rms_jerk": 948.89,
+        "rms_pct": 9.5652
+      },
+      {
+        "peak_jerk": 76.63,
+        "policy": "rtc",
+        "rms_jerk": 21.31,
+        "rms_pct": 11.8221
+      }
+    ],
+    "prefix_sweep": [
+      {
+        "conditions_live_region": false,
+        "past_pct": 0.0,
+        "peak_jerk": 6962.05,
+        "prefix_ms": 0.0,
+        "prefix_ticks": 0,
+        "rms_jerk": 948.89,
+        "rms_pct": 9.5652
+      },
+      {
+        "conditions_live_region": false,
+        "past_pct": 25.0,
+        "peak_jerk": 6962.05,
+        "prefix_ms": 10.0,
+        "prefix_ticks": 10,
+        "rms_jerk": 948.89,
+        "rms_pct": 9.5652
+      },
+      {
+        "conditions_live_region": false,
+        "past_pct": 50.0,
+        "peak_jerk": 6366.83,
+        "prefix_ms": 20.0,
+        "prefix_ticks": 20,
+        "rms_jerk": 852.21,
+        "rms_pct": 9.5729
+      },
+      {
+        "conditions_live_region": false,
+        "past_pct": 75.0,
+        "peak_jerk": 2740.53,
+        "prefix_ms": 30.0,
+        "prefix_ticks": 30,
+        "rms_jerk": 343.54,
+        "rms_pct": 9.9798
+      },
+      {
+        "conditions_live_region": true,
+        "past_pct": 100.0,
+        "peak_jerk": 76.63,
+        "prefix_ms": 40.0,
+        "prefix_ticks": 40,
+        "rms_jerk": 21.31,
+        "rms_pct": 11.8221
+      },
+      {
+        "conditions_live_region": true,
+        "past_pct": 125.0,
+        "peak_jerk": 85.52,
+        "prefix_ms": 50.0,
+        "prefix_ticks": 50,
+        "rms_jerk": 23.78,
+        "rms_pct": 14.3287
+      }
+    ]
+  }
+}

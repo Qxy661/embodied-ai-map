@@ -1,0 +1,127 @@
+{
+  "block": "map/04-execution/01-jitter-budget",
+  "generated_at_unix": 1790611203,
+  "git_rev": "uncommitted",
+  "metrics": {
+    "contention_sleep_p99_blowup": 90.3,
+    "jitter_budget_us": 100.0,
+    "n_contenders": 8,
+    "n_samples_pooled": 3600,
+    "n_ticks_per_pass": 1200,
+    "obf_ratio": 5.6,
+    "obf_ratio_floor": 2,
+    "obf_ratio_median_of_passes": 54.9,
+    "p50_ratio": 1826.0,
+    "p50_ratio_floor": 1000,
+    "p99_rank_from_worst": 12,
+    "p99_ratio_max": 109.61,
+    "p99_ratio_min": 0.14,
+    "p99_ratio_swing_floor": 3,
+    "period_us": 1000.0,
+    "repeats": 3,
+    "sleep_contended_over_budget_frac": 0.9978,
+    "sleep_contended_p50_us": 45283.46,
+    "sleep_contended_p99_us": 301801.36,
+    "sleep_idle_over_budget_frac": 0.8256,
+    "sleep_idle_p50_us": 292.16,
+    "sleep_idle_p99_us_median_of_passes": 2989.58,
+    "spin_contended_over_budget_frac": 0.8886,
+    "spin_contended_p50_over_sleep": 1.96,
+    "spin_contended_p50_us": 88563.47,
+    "spin_idle_over_budget_frac": 0.1464,
+    "spin_idle_p50_us": 0.16,
+    "spin_idle_p99_us_median_of_passes": 331.12
+  },
+  "notes": "Live measurement on a general-purpose OS: volatile by construction, checked approximately. Headline numbers are pooled across passes and reproducible; per-pass p99 is not, which is the block's point. Absolutes and the sleep-vs-spin ordering are host-specific -- on an isolated core under PREEMPT_RT the ordering inverts.",
+  "numpy": "2.5.3",
+  "python": "3.12.10",
+  "seed": 0,
+  "tables": {
+    "passes": [
+      {
+        "condition": "sleep_idle",
+        "over_budget_frac": 0.8317,
+        "p50_us": 298.86,
+        "p99_us": 2319.44,
+        "pass": 1
+      },
+      {
+        "condition": "spin_idle",
+        "over_budget_frac": 0.005,
+        "p50_us": 0.06,
+        "p99_us": 21.16,
+        "pass": 1
+      },
+      {
+        "condition": "sleep_contended",
+        "over_budget_frac": 0.9983,
+        "p50_us": 45886.47,
+        "p99_us": 325789.06,
+        "pass": 1
+      },
+      {
+        "condition": "spin_contended",
+        "over_budget_frac": 0.8383,
+        "p50_us": 46652.54,
+        "p99_us": 238735.92,
+        "pass": 1
+      },
+      {
+        "condition": "sleep_idle",
+        "over_budget_frac": 0.8242,
+        "p50_us": 298.82,
+        "p99_us": 2989.58,
+        "pass": 2
+      },
+      {
+        "condition": "spin_idle",
+        "over_budget_frac": 0.015,
+        "p50_us": 0.16,
+        "p99_us": 331.12,
+        "pass": 2
+      },
+      {
+        "condition": "sleep_contended",
+        "over_budget_frac": 0.9975,
+        "p50_us": 49459.05,
+        "p99_us": 235197.8,
+        "pass": 2
+      },
+      {
+        "condition": "spin_contended",
+        "over_budget_frac": 0.9042,
+        "p50_us": 239524.72,
+        "p99_us": 1688697.15,
+        "pass": 2
+      },
+      {
+        "condition": "sleep_idle",
+        "over_budget_frac": 0.8208,
+        "p50_us": 278.79,
+        "p99_us": 8324.4,
+        "pass": 3
+      },
+      {
+        "condition": "spin_idle",
+        "over_budget_frac": 0.4192,
+        "p50_us": 0.36,
+        "p99_us": 59825.98,
+        "pass": 3
+      },
+      {
+        "condition": "sleep_contended",
+        "over_budget_frac": 0.9975,
+        "p50_us": 41284.46,
+        "p99_us": 196109.25,
+        "pass": 3
+      },
+      {
+        "condition": "spin_contended",
+        "over_budget_frac": 0.9233,
+        "p50_us": 106439.39,
+        "p99_us": 441488.31,
+        "pass": 3
+      }
+    ]
+  }
+}

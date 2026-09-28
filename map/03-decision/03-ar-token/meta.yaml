@@ -1,0 +1,18 @@
+block: 03-decision/03-ar-token
+title: 自回归动作 token：离散化的两笔账
+tier: primary          # primary | secondary | watch
+engagement: self       # self | depend | adapter | cite
+ring: 03-decision
+
+# Which settled convention this block leans on, if any.
+standards:
+  - "RT-2 / OpenVLA action tokenisation: per-dimension uniform bins over the dataset min/max"
+  - "FAST-style delta action tokenisation (increments instead of positions)"
+  - "pi0 flow-matching head, 10 Euler steps (the ③-02 baseline this block is priced against)"
+
+# Numbers that appear in README prose but are structural, not results.
+literals:
+  - 12     # sqrt(12), the uniform-quantiser law's denominator
+  - 2      # two tokenisations (absolute / delta), two currencies (bins / serial steps)
+  - 3      # the third route into the frequency mismatch, after chunking and flow matching
+  - 8      # the arithmetic factor between the 32 and the 256 bins a floor can buy

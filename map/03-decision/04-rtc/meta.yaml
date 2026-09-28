@@ -1,0 +1,17 @@
+block: 03-decision/04-rtc
+title: 实时分块：推理没算完时，动作从哪来
+tier: primary          # primary | secondary | watch
+engagement: self       # self | depend | adapter | cite
+ring: 03-decision
+
+# Which settled convention this block leans on, if any.
+standards:
+  - "Physical Intelligence, real-time chunking: prefix conditioning / inpainting of a chunk head"
+  - "SmolVLA async inference stack: early trigger + chunk fusion + decoupled threads"
+  - "LeRobot RTCConfig (execution_horizon / prefix length)"
+
+# Numbers that appear in README prose but are structural, not results.
+literals:
+  - 2      # two things happen at the freeze boundary: continuity and cost
+  - 3      # three schedules in the head-to-head table
+  - 6      # six rows in each sweep

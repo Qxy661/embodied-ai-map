@@ -1,0 +1,22 @@
+block: 03-decision/02-flow-matching
+title: 流匹配：从噪声到动作块的向量场
+tier: primary          # primary | secondary | watch
+engagement: self       # self | depend | adapter | cite
+ring: 03-decision
+
+# Which settled convention this block leans on, if any.
+standards:
+  - "openpi / pi0 flow-matching action head: tau=0 noise -> tau=1 action, u = x1 - x0"
+  - "LeRobot flow-matching / SmolVLA action head (chunked, ~10 Euler steps)"
+
+# Numbers that appear in README prose but are structural, not results.
+literals:
+  - 0      # tau = 0 is the noise end of the path
+  - 1      # tau = 1 is the data end
+  - 2      # two modes, and a 2-D action
+  - 3      # three layers, three training runs
+  - 6      # six step counts in the sweep
+  - 10     # the default step count, quoted from pi0
+  - 0.35   # cluster standard deviation
+  - 1.5    # cluster centre
+  - -1.5   # the other cluster centre

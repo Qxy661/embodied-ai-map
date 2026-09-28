@@ -1,0 +1,13 @@
+block: 02-representation/02-temporal-necessity
+title: 时序注意力为什么不是可选项
+tier: primary          # primary | secondary | watch
+engagement: self       # self | depend | adapter | cite
+ring: 02-representation
+
+# Which settled convention this block leans on, if any.
+standards:
+  - "BEV occupancy grid convention: 0.5 m per cell, 10 Hz frame rate (the common near-field camera-BEV setting)"
+
+# Numbers that appear in README prose but are structural, not results.
+literals:
+  - 3      # three conclusions drawn from the sweep

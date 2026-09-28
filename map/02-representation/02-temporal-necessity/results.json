@@ -1,0 +1,60 @@
+{
+  "block": "map/02-representation/02-temporal-necessity",
+  "generated_at_unix": 1790611247,
+  "git_rev": "uncommitted",
+  "metrics": {
+    "best_k": 8,
+    "cell_m": 0.5,
+    "detector_sigma_m": 0.25,
+    "error_reduction_vs_single_frame": 4.764,
+    "extent_m": 32.0,
+    "finitediff_mae_mps": 0.5074,
+    "fps": 10.0,
+    "frames": 32,
+    "grid_cells": 64,
+    "k2_noise_mps": 3.613,
+    "k2_over_single_frame": 1.834,
+    "mean_speed_mps": 2.4171,
+    "n_objects": 8,
+    "obs_pos_sigma_m": 0.2555,
+    "occlusion_frame": 24,
+    "occlusion_single_frame_failure_rate": 1.0,
+    "occlusion_temporal_mae_mps": 0.4713,
+    "occlusion_temporal_over_single_frame": 0.195,
+    "quant_sigma_floor_m": 0.1443,
+    "single_frame_mae_mps": 2.4171,
+    "speed_hi_mps": 3.2,
+    "speed_lo_mps": 0.8
+  },
+  "numpy": "2.5.3",
+  "python": "3.12.10",
+  "seed": 0,
+  "tables": {
+    "k_sweep": [
+      {
+        "K": 2,
+        "velocity_mae_mps": 4.4335,
+        "vs_single_frame": 1.834,
+        "window_s": 0.1
+      },
+      {
+        "K": 3,
+        "velocity_mae_mps": 2.2177,
+        "vs_single_frame": 0.917,
+        "window_s": 0.2
+      },
+      {
+        "K": 4,
+        "velocity_mae_mps": 1.4159,
+        "vs_single_frame": 0.586,
+        "window_s": 0.3
+      },
+      {
+        "K": 8,
+        "velocity_mae_mps": 0.5074,
+        "vs_single_frame": 0.21,
+        "window_s": 0.7
+      }
+    ]
+  }
+}

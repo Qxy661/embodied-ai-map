@@ -1,0 +1,196 @@
+{
+  "block": "map/01-data/01-action-space-unification",
+  "generated_at_unix": 1790611245,
+  "git_rev": "uncommitted",
+  "metrics": {
+    "action_noise_sigma": 0.02,
+    "bins_per_dim": 256,
+    "dof_max": 8,
+    "dof_sum": 19,
+    "kinematic_idiosyncrasy": 0.08,
+    "n_robots": 3,
+    "n_samples_per_robot": 4000,
+    "norm_range": [
+      -1.0,
+      1.0
+    ],
+    "obs_half_range_m": 0.6,
+    "transfer_error_reduction": 15.93,
+    "transfer_mae_raw": 0.5576,
+    "transfer_mae_unified": 0.035,
+    "vocab_compression": 2.375,
+    "vocab_per_robot_raw": [
+      1792,
+      2048,
+      1024
+    ],
+    "vocab_raw": 4864,
+    "vocab_unified": 2048
+  },
+  "numpy": "2.5.3",
+  "python": "3.12.10",
+  "seed": 0,
+  "tables": {
+    "idiosyncrasy_sweep": [
+      {
+        "delta": 0.0,
+        "raw_mae": 0.5524,
+        "reduction": 34.81,
+        "unified_mae": 0.0159
+      },
+      {
+        "delta": 0.02,
+        "raw_mae": 0.5532,
+        "reduction": 31.22,
+        "unified_mae": 0.0177
+      },
+      {
+        "delta": 0.05,
+        "raw_mae": 0.555,
+        "reduction": 22.07,
+        "unified_mae": 0.0252
+      },
+      {
+        "delta": 0.08,
+        "raw_mae": 0.5576,
+        "reduction": 15.93,
+        "unified_mae": 0.035
+      },
+      {
+        "delta": 0.15,
+        "raw_mae": 0.5669,
+        "reduction": 9.35,
+        "unified_mae": 0.0606
+      },
+      {
+        "delta": 0.3,
+        "raw_mae": 0.6019,
+        "reduction": 5.1,
+        "unified_mae": 0.1181
+      }
+    ],
+    "robots": [
+      {
+        "arm_joints": 6,
+        "dof": 7,
+        "gripper_hi": 1.0,
+        "gripper_lo": 0.0,
+        "joint_hi": [
+          3.14,
+          3.14,
+          3.14,
+          3.14,
+          3.14,
+          3.14
+        ],
+        "joint_lo": [
+          -3.14,
+          -3.14,
+          -3.14,
+          -3.14,
+          -3.14,
+          -3.14
+        ],
+        "robot": "A",
+        "unit": "\u5f27\u5ea6 rad",
+        "vocab_raw": 1792
+      },
+      {
+        "arm_joints": 7,
+        "dof": 8,
+        "gripper_hi": 1000.0,
+        "gripper_lo": 0.0,
+        "joint_hi": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "joint_lo": [
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0,
+          -1.0
+        ],
+        "robot": "B",
+        "unit": "\u5f52\u4e00\u5316",
+        "vocab_raw": 2048
+      },
+      {
+        "arm_joints": 3,
+        "dof": 4,
+        "gripper_hi": 100.0,
+        "gripper_lo": 0.0,
+        "joint_hi": [
+          0.3,
+          20.0,
+          0.1
+        ],
+        "joint_lo": [
+          -0.3,
+          -20.0,
+          -0.1
+        ],
+        "robot": "C",
+        "unit": "\u7c73 / \u5398\u7c73\u6df7\u7528",
+        "vocab_raw": 1024
+      }
+    ],
+    "transfer": [
+      {
+        "common_dims": 6,
+        "from": "A",
+        "raw_mae": 0.5576,
+        "reduction": 15.93,
+        "to": "B",
+        "unified_mae": 0.035
+      },
+      {
+        "common_dims": 3,
+        "from": "A",
+        "raw_mae": 2.1227,
+        "reduction": 9.2,
+        "to": "C",
+        "unified_mae": 0.2307
+      },
+      {
+        "common_dims": 6,
+        "from": "B",
+        "raw_mae": 0.5597,
+        "reduction": 5.09,
+        "to": "A",
+        "unified_mae": 0.1099
+      },
+      {
+        "common_dims": 3,
+        "from": "B",
+        "raw_mae": 1.9734,
+        "reduction": 9.41,
+        "to": "C",
+        "unified_mae": 0.2096
+      },
+      {
+        "common_dims": 3,
+        "from": "C",
+        "raw_mae": 2.1239,
+        "reduction": 17.44,
+        "to": "A",
+        "unified_mae": 0.1218
+      },
+      {
+        "common_dims": 3,
+        "from": "C",
+        "raw_mae": 1.9746,
+        "reduction": 59.24,
+        "to": "B",
+        "unified_mae": 0.0333
+      }
+    ]
+  }
+}

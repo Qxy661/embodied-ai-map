@@ -1,0 +1,43 @@
+block: 04-execution/01-jitter-budget
+title: 1 kHz 环的抖动预算
+tier: primary
+engagement: self
+ring: 04-execution
+
+# This block measures the live machine, so it cannot reproduce to the digit.
+# check_numbers.py checks it approximately instead of exactly.
+#
+# `citable` is what keeps that approximation meaningful: the checker builds its
+# net from these keys only.  An approximate window around every one of a block's
+# ~28 metrics covers essentially the whole number line and catches nothing (a
+# fabricated "55.5" once passed that way).  Naming the few numbers the prose may
+# use is what gives the check teeth -- and it is honest about which quantities
+# this block is actually willing to stand behind.
+volatile: true
+citable:
+  - sleep_idle_over_budget_frac
+  - sleep_contended_over_budget_frac
+  - spin_contended_over_budget_frac
+  - sleep_idle_p50_us
+  - spin_idle_p50_us
+  - p50_ratio_floor
+  - obf_ratio_floor
+  - p99_ratio_swing_floor
+  - p99_rank_from_worst
+  - n_samples_pooled
+  - n_ticks_per_pass
+  - repeats
+  - n_contenders
+  - period_us
+  - jitter_budget_us
+
+standards:
+  - "PREEMPT_RT + CPU isolation + SCHED_FIFO + mlockall (the Linux real-time recipe)"
+  - "EtherCAT cycle jitter, sub-100ns class -- quoted, not measured here"
+
+literals:
+  - 1000   # the 1 kHz period, named in the title
+  - 1      # the rate itself, written "1 kHz"
+  - 100    # the 10%-of-period jitter allowance we score against
+  - 10000  # microseconds per 10 ms, used when describing the OS tick
+  - 10     # percent, when writing 10%

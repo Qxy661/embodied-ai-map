@@ -1,0 +1,15 @@
+block: 06-evaluation/02-benchmark-gaming
+title: 基准能被什么刷掉
+tier: primary
+engagement: self
+ring: 06-evaluation
+
+standards:
+  - "LIBERO-PRO perturbation families (target / position / object / instruction)"
+  - "RoboArena (CoRL 2025) -- paired, blind, real-robot protocol as the alternative"
+
+literals:
+  - 90     # ">90% of models collapse", quoted from LIBERO-PRO
+  - 20     # the 90M probe parameter count, quoted
+  - 99     # the reported probe accuracy on LIBERO-Spatial, quoted
+  - 100    # percent

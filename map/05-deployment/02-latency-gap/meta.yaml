@@ -1,0 +1,17 @@
+block: 05-deployment/02-latency-gap
+title: 慢脑 / 快脑：分层架构的可行区间
+tier: primary          # primary | secondary
+engagement: self       # self | depend | adapter | cite
+ring: 05-deployment
+
+# 这一块引用的工业结构。三家都是厂商公开描述，本块没有复现其中任何一个
+# 数字，正文引用处一律标 !CITE。
+standards:
+  - "Figure Helix 的 S2 / S1 / S0 三频分层"
+  - "NVIDIA GR00T N1 的 System 2 / System 1 双系统"
+  - "Google Gemini Robotics 1.5 的云端慢脑 + 本体快脑"
+
+# 正文里出现的结构性常量：不是任何一次运行的产物。
+literals:
+  - 3      # 「三家独立团队」的计数
+  - 1      # 「只有一层」的层数

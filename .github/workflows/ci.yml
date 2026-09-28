@@ -1,0 +1,50 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy PyYAML pytest ruff
+
+      - name: Lint
+        run: ruff check .
+
+      - name: Format check
+        run: ruff format --check .
+
+      # The core gate: every number printed in a block's README must be a correct
+      # rounding of something in its committed results.json.
+      - name: Numbers trace to a run
+        run: python scripts/check_numbers.py
+
+      # A seeded block that is not actually seeded is the failure this repository
+      # exists to prevent, so it gets its own step rather than a mention.
+      - name: Deterministic blocks reproduce
+        run: python scripts/check_reproducible.py
+
+      # Regenerate the deterministic blocks on a *different* machine, then re-check.
+      # Volatile blocks are skipped: they measure the live host, so CI would
+      # overwrite host-specific numbers that their committed README does not match.
+      - name: Re-run deterministic blocks
+        run: python scripts/run_all.py --skip-volatile
+
+      - name: Numbers still trace after re-running
+        run: python scripts/check_numbers.py
+
+      - name: Checker's own tests
+        run: python -m pytest tests/ -q

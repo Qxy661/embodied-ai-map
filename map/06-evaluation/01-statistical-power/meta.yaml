@@ -1,0 +1,19 @@
+block: 06-evaluation/01-statistical-power
+title: 统计功效：二十次试验分辨不出什么
+tier: primary
+engagement: self
+ring: 06-evaluation
+
+standards:
+  - "Wilson score interval (closed form; mapkit.wilson_interval)"
+  - "rliable / stratified bootstrap & IQM -- the protocol this argues you should adopt"
+  - "RoboArena pairwise protocol (CoRL 2025) -- the field's response to this problem"
+
+literals:
+  - 95     # confidence level, named in prose
+  - 20     # the N=20 design point under discussion
+  - 30     # the other common design point (20-30 trials)
+  - 80     # the conventional power target
+  - 100    # percent, when writing "百分点"
+  - 22     # the 22 point gap is also in results, but appears in headings
+  - 90     # hypothetical near-ceiling rate used to make the "90 vs 92" point

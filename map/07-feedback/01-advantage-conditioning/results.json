@@ -1,0 +1,183 @@
+{
+  "block": "map/07-feedback/01-advantage-conditioning",
+  "generated_at_unix": 1790611263,
+  "git_rev": "uncommitted",
+  "metrics": {
+    "adv_noise": 0.4,
+    "awr_effective_sample_pct": 21.22,
+    "awr_floor_effective_sample_pct": 22.22,
+    "awr_floor_shift_rmse": 0.40166,
+    "awr_floor_train_rmse": 0.1308,
+    "awr_shift_over_train": 3.23,
+    "awr_shift_rmse": 0.40481,
+    "awr_train_rmse": 0.12533,
+    "bandwidth": 0.06,
+    "best_beta": 0.4,
+    "best_floor": 0.005,
+    "best_floor_shift_rmse": 0.40166,
+    "best_floor_train_rmse": 0.1308,
+    "beta_star": 0.4,
+    "beta_sweep_min_rmse": 0.40481,
+    "constant_predictor_shift_rmse": 0.43692,
+    "critic_over_oracle_filter_shift": 1.06,
+    "fail_bias": 0.35,
+    "fail_noise": 0.15,
+    "far_end_failure_mass_pct": 99.9,
+    "filtered_effective_sample_pct": 55.02,
+    "filtered_over_uniform_shift": 1.411,
+    "filtered_over_uniform_train": 1.257,
+    "filtered_shift_over_train": 3.741,
+    "filtered_shift_rmse": 0.57616,
+    "filtered_train_rmse": 0.154,
+    "floor_gain_shift": 1.008,
+    "floor_star": 0.005,
+    "full_floor_effective_sample_pct": 62.55,
+    "full_floor_shift_rmse": 0.40785,
+    "hardest_beta": 0.05,
+    "hardest_beta_effective_sample_pct": 0.87,
+    "hardest_beta_shift_rmse": 0.56763,
+    "hardest_beta_train_rmse": 0.22591,
+    "hardest_over_best_beta_shift": 1.402,
+    "hardest_over_uniform_shift": 1.39,
+    "hardest_over_uniform_train": 1.167,
+    "n_demos": 200,
+    "n_replicas": 40,
+    "nearest_success_gap_bandwidths": 5.66,
+    "no_floor_shift_rmse": 0.40481,
+    "no_floor_train_rmse": 0.12533,
+    "oracle_filter_effective_sample_pct": 56.17,
+    "oracle_filter_shift_rmse": 0.54337,
+    "oracle_filter_train_rmse": 0.14209,
+    "p_success_floor": 0.0,
+    "q_fail_hi": 0.15,
+    "q_success_lo": 0.75,
+    "scene_skew": 1.0,
+    "shift_lo": 0.7,
+    "softest_beta": 2.0,
+    "softest_beta_shift_rmse": 0.40723,
+    "softest_beta_train_rmse": 0.16549,
+    "success_ceiling": 0.75,
+    "uniform_effective_sample_pct": 100.0,
+    "uniform_over_awr_shift": 1.009,
+    "uniform_over_awr_train": 1.545,
+    "uniform_shift_over_train": 2.109,
+    "uniform_shift_rmse": 0.40836,
+    "uniform_train_rmse": 0.19361
+  },
+  "notes": "A kernel smoother, not a trained policy, and an advantage conditioning model, not a reproduction of RECAP or AWR. Means over 40 replicas of 200 demonstrations: the aggressive policies are high-variance, so one pool would not show the trade.",
+  "numpy": "2.5.3",
+  "python": "3.12.10",
+  "seed": 0,
+  "tables": {
+    "beta_sweep": [
+      {
+        "beta": 0.05,
+        "effective_sample_pct": 0.87,
+        "shift_rmse": 0.56763,
+        "train_rmse": 0.22591
+      },
+      {
+        "beta": 0.1,
+        "effective_sample_pct": 1.53,
+        "shift_rmse": 0.49773,
+        "train_rmse": 0.17307
+      },
+      {
+        "beta": 0.2,
+        "effective_sample_pct": 4.95,
+        "shift_rmse": 0.42658,
+        "train_rmse": 0.13287
+      },
+      {
+        "beta": 0.4,
+        "effective_sample_pct": 21.22,
+        "shift_rmse": 0.40481,
+        "train_rmse": 0.12533
+      },
+      {
+        "beta": 0.8,
+        "effective_sample_pct": 51.06,
+        "shift_rmse": 0.40534,
+        "train_rmse": 0.13957
+      },
+      {
+        "beta": 2.0,
+        "effective_sample_pct": 84.5,
+        "shift_rmse": 0.40723,
+        "train_rmse": 0.16549
+      }
+    ],
+    "floor_sweep": [
+      {
+        "effective_sample_pct": 21.22,
+        "floor": 0.0,
+        "shift_rmse": 0.40481,
+        "train_rmse": 0.12533
+      },
+      {
+        "effective_sample_pct": 21.22,
+        "floor": 0.0001,
+        "shift_rmse": 0.40482,
+        "train_rmse": 0.12533
+      },
+      {
+        "effective_sample_pct": 21.29,
+        "floor": 0.001,
+        "shift_rmse": 0.40429,
+        "train_rmse": 0.1258
+      },
+      {
+        "effective_sample_pct": 22.22,
+        "floor": 0.005,
+        "shift_rmse": 0.40166,
+        "train_rmse": 0.1308
+      },
+      {
+        "effective_sample_pct": 27.2,
+        "floor": 0.02,
+        "shift_rmse": 0.40455,
+        "train_rmse": 0.14722
+      },
+      {
+        "effective_sample_pct": 62.55,
+        "floor": 0.1,
+        "shift_rmse": 0.40785,
+        "train_rmse": 0.17824
+      }
+    ],
+    "strategies": [
+      {
+        "effective_sample_pct": 100.0,
+        "label": "\u5168\u7528",
+        "shift_over_train": 2.109,
+        "shift_rmse": 0.40836,
+        "strategy": "uniform",
+        "train_rmse": 0.19361
+      },
+      {
+        "effective_sample_pct": 55.02,
+        "label": "\u53ea\u7559\u6210\u529f",
+        "shift_over_train": 3.741,
+        "shift_rmse": 0.57616,
+        "strategy": "filtered",
+        "train_rmse": 0.154
+      },
+      {
+        "effective_sample_pct": 21.22,
+        "label": "\u4f18\u52bf\u52a0\u6743",
+        "shift_over_train": 3.23,
+        "shift_rmse": 0.40481,
+        "strategy": "awr",
+        "train_rmse": 0.12533
+      },
+      {
+        "effective_sample_pct": 22.22,
+        "label": "\u52a0\u6743+\u4fdd\u5e95",
+        "shift_over_train": 3.071,
+        "shift_rmse": 0.40166,
+        "strategy": "awr_floor",
+        "train_rmse": 0.1308
+      }
+    ]
+  }
+}

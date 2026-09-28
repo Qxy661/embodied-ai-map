@@ -1,0 +1,92 @@
+{
+  "block": "map/03-decision/01-frequency-mismatch",
+  "generated_at_unix": 1790611247,
+  "git_rev": "uncommitted",
+  "metrics": {
+    "ctrl_hz": 1000,
+    "ctrl_obs_ratio": 33.333,
+    "duration_s": 4.0,
+    "h1_required_infer_hz": 1000.0,
+    "h_min_feasible": 50,
+    "infer_ms": 20.0,
+    "latency_floor_pct": 7.995,
+    "max_infer_hz": 20.0,
+    "obs_hz": 30,
+    "oracle_growth_H1_to_H50": 1.04,
+    "oracle_mae_at_H1": 0.079947,
+    "oracle_mae_at_H50": 0.083134,
+    "prediction_gain_at_H50": 2.126,
+    "reactive_growth_H1_to_H50": 2.211,
+    "reactive_mae_at_H1": 0.079947,
+    "reactive_mae_at_H50": 0.17678,
+    "target_a": 1.0,
+    "target_f_hz": 1.0
+  },
+  "numpy": "2.5.3",
+  "python": "3.12.10",
+  "seed": 0,
+  "tables": {
+    "sweep": [
+      {
+        "H": 1,
+        "chunk_ms": 1.0,
+        "feasible": false,
+        "oracle_mae": 0.079947,
+        "oracle_rms": 0.088799,
+        "reactive_mae": 0.079947,
+        "reactive_rms": 0.088799,
+        "required_infer_hz": 1000.0
+      },
+      {
+        "H": 5,
+        "chunk_ms": 5.0,
+        "feasible": false,
+        "oracle_mae": 0.079953,
+        "oracle_rms": 0.088806,
+        "reactive_mae": 0.087928,
+        "reactive_rms": 0.097866,
+        "required_infer_hz": 200.0
+      },
+      {
+        "H": 10,
+        "chunk_ms": 10.0,
+        "feasible": false,
+        "oracle_mae": 0.079979,
+        "oracle_rms": 0.088838,
+        "reactive_mae": 0.097899,
+        "reactive_rms": 0.109481,
+        "required_infer_hz": 100.0
+      },
+      {
+        "H": 25,
+        "chunk_ms": 25.0,
+        "feasible": false,
+        "oracle_mae": 0.080347,
+        "oracle_rms": 0.089256,
+        "reactive_mae": 0.127667,
+        "reactive_rms": 0.145432,
+        "required_infer_hz": 40.0
+      },
+      {
+        "H": 50,
+        "chunk_ms": 50.0,
+        "feasible": true,
+        "oracle_mae": 0.083134,
+        "oracle_rms": 0.092461,
+        "reactive_mae": 0.17678,
+        "reactive_rms": 0.206835,
+        "required_infer_hz": 20.0
+      },
+      {
+        "H": 100,
+        "chunk_ms": 100.0,
+        "feasible": true,
+        "oracle_mae": 0.105278,
+        "oracle_rms": 0.120755,
+        "reactive_mae": 0.275941,
+        "reactive_rms": 0.329652,
+        "required_infer_hz": 10.0
+      }
+    ]
+  }
+}

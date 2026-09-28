@@ -1,0 +1,313 @@
+{
+  "block": "map/04-execution/02-ipc-cost",
+  "generated_at_unix": 1790611259,
+  "git_rev": "uncommitted",
+  "metrics": {
+    "box_fields": 7,
+    "copies_loaned": 0,
+    "copies_pipe_pickle": 4,
+    "copies_pipe_raw": 2,
+    "copies_shm_handle": 1,
+    "ctrl_bytes": 128,
+    "ctrl_hz": 1000.0,
+    "ctrl_mb_per_s": 0.13,
+    "ddr_practical_mb_per_s": 25000.0,
+    "detection_bytes": 2800,
+    "detection_frac_of_gbe": 0.000672,
+    "detection_mb_per_s": 0.08,
+    "detection_ms_on_gbe": 0.0224,
+    "detection_us_on_gbe": 22.4,
+    "disciplined_pipeline_mb_per_s": 186.84,
+    "feature_bytes": 4096,
+    "feature_dim": 1024,
+    "feature_mb_per_s": 0.12,
+    "fps": 30.0,
+    "frame_bytes": 6220800,
+    "frame_c": 3,
+    "frame_frac_of_gbe": 1.493,
+    "frame_frac_of_ten_gbe": 0.1493,
+    "frame_h": 1080,
+    "frame_mb": 6.22,
+    "frame_mb_per_s": 186.62,
+    "frame_mib": 5.93,
+    "frame_ms_on_gbe": 49.77,
+    "frame_ms_on_ten_gbe": 4.98,
+    "frame_period_ms": 33.33,
+    "frame_w": 1920,
+    "gbe_frame_over_period": 1.49,
+    "h264_bytes": 124416,
+    "h264_mb_per_s": 3.73,
+    "h264_ms_on_gbe": 0.995,
+    "h264_ratio_assumed": 50,
+    "link_gbe_mb_per_s": 125.0,
+    "link_ten_gbe_mb_per_s": 1250.0,
+    "link_usb3_mb_per_s": 625.0,
+    "max_fps_1080p_gbe": 20.09,
+    "max_mpx_gbe_at_30hz": 1.39,
+    "mem_bw_loaned_mb_per_s": 0.0,
+    "mem_bw_pipe_pickle_mb_per_s": 746.5,
+    "mem_bw_pipe_raw_mb_per_s": 373.25,
+    "mem_bw_shm_mb_per_s": 186.62,
+    "mem_frac_of_ddr_pipe_pickle": 0.0299,
+    "n_boxes": 100,
+    "n_hops": 3,
+    "n_joints": 32,
+    "naive_over_disciplined": 3.0,
+    "naive_pipeline_mb_per_s": 559.87,
+    "pickle_overhead_bytes": 166,
+    "pickle_wire_bytes": 6220966,
+    "ratio_ctrl_hz_to_cam_hz": 33.33,
+    "ratio_frame_to_ctrl": 1458.0,
+    "ratio_frame_to_detection": 2221.7,
+    "ratio_frame_to_feature": 1518.8,
+    "ten_gbe_frame_over_period": 0.149
+  },
+  "notes": "Entirely arithmetic, no timing: deterministic by construction and checked exactly. The copy counts in COPY_COUNTS are the one modelling assumption; they describe each transport's design, not this host. Link rates are nameplate constants of the standards. 04-01 owns the live measurement in this ring.",
+  "numpy": "2.5.3",
+  "python": "3.12.10",
+  "seed": 0,
+  "tables": {
+    "hops": [
+      {
+        "bytes": 6220800,
+        "hop": "camera -> perception",
+        "hz": 30.0,
+        "mb_per_s": 186.62,
+        "payload": "1080p RGB"
+      },
+      {
+        "bytes": 2800,
+        "hop": "perception -> planning",
+        "hz": 30.0,
+        "mb_per_s": 0.08,
+        "payload": "detections"
+      },
+      {
+        "bytes": 128,
+        "hop": "planning -> servo",
+        "hz": 1000.0,
+        "mb_per_s": 0.13,
+        "payload": "joint command"
+      }
+    ],
+    "links": [
+      {
+        "detection_frac": 0.000672,
+        "detection_ms": 0.0224,
+        "detection_us": 22.4,
+        "frame_frac": 1.493,
+        "frame_ms": 49.77,
+        "h264_ms": 0.995,
+        "link": "gbe",
+        "mb_per_s": 125.0,
+        "note": "\u5343\u5146\u4ee5\u592a\u7f51"
+      },
+      {
+        "detection_frac": 0.000134,
+        "detection_ms": 0.00448,
+        "detection_us": 4.5,
+        "frame_frac": 0.2986,
+        "frame_ms": 9.95,
+        "h264_ms": 0.199,
+        "link": "usb3",
+        "mb_per_s": 625.0,
+        "note": "USB 3.2 Gen1"
+      },
+      {
+        "detection_frac": 6.7e-05,
+        "detection_ms": 0.00224,
+        "detection_us": 2.2,
+        "frame_frac": 0.1493,
+        "frame_ms": 4.98,
+        "h264_ms": 0.1,
+        "link": "ten_gbe",
+        "mb_per_s": 1250.0,
+        "note": "\u4e07\u5146\u4ee5\u592a\u7f51"
+      }
+    ],
+    "payloads": [
+      {
+        "bytes": 6220800,
+        "hz": 30.0,
+        "mb_per_s": 186.62,
+        "payload": "1080p RGB frame"
+      },
+      {
+        "bytes": 124416,
+        "hz": 30.0,
+        "mb_per_s": 3.73,
+        "payload": "H.264 stream"
+      },
+      {
+        "bytes": 2800,
+        "hz": 30.0,
+        "mb_per_s": 0.08,
+        "payload": "100 boxes x 7 f32"
+      },
+      {
+        "bytes": 4096,
+        "hz": 30.0,
+        "mb_per_s": 0.12,
+        "payload": "feature 1024 f32"
+      },
+      {
+        "bytes": 128,
+        "hz": 1000.0,
+        "mb_per_s": 0.13,
+        "payload": "joint command 32 f32"
+      }
+    ],
+    "sweep": [
+      {
+        "fits_gbe": true,
+        "fps": 10,
+        "gbe_frac": 0.074,
+        "h": 480,
+        "mb_per_s": 9.22,
+        "mpx": 0.31,
+        "resolution": "VGA",
+        "w": 640
+      },
+      {
+        "fits_gbe": true,
+        "fps": 30,
+        "gbe_frac": 0.221,
+        "h": 480,
+        "mb_per_s": 27.65,
+        "mpx": 0.31,
+        "resolution": "VGA",
+        "w": 640
+      },
+      {
+        "fits_gbe": true,
+        "fps": 60,
+        "gbe_frac": 0.442,
+        "h": 480,
+        "mb_per_s": 55.3,
+        "mpx": 0.31,
+        "resolution": "VGA",
+        "w": 640
+      },
+      {
+        "fits_gbe": true,
+        "fps": 10,
+        "gbe_frac": 0.221,
+        "h": 720,
+        "mb_per_s": 27.65,
+        "mpx": 0.92,
+        "resolution": "720p",
+        "w": 1280
+      },
+      {
+        "fits_gbe": true,
+        "fps": 30,
+        "gbe_frac": 0.664,
+        "h": 720,
+        "mb_per_s": 82.94,
+        "mpx": 0.92,
+        "resolution": "720p",
+        "w": 1280
+      },
+      {
+        "fits_gbe": false,
+        "fps": 60,
+        "gbe_frac": 1.327,
+        "h": 720,
+        "mb_per_s": 165.89,
+        "mpx": 0.92,
+        "resolution": "720p",
+        "w": 1280
+      },
+      {
+        "fits_gbe": true,
+        "fps": 10,
+        "gbe_frac": 0.498,
+        "h": 1080,
+        "mb_per_s": 62.21,
+        "mpx": 2.07,
+        "resolution": "1080p",
+        "w": 1920
+      },
+      {
+        "fits_gbe": false,
+        "fps": 30,
+        "gbe_frac": 1.493,
+        "h": 1080,
+        "mb_per_s": 186.62,
+        "mpx": 2.07,
+        "resolution": "1080p",
+        "w": 1920
+      },
+      {
+        "fits_gbe": false,
+        "fps": 60,
+        "gbe_frac": 2.986,
+        "h": 1080,
+        "mb_per_s": 373.25,
+        "mpx": 2.07,
+        "resolution": "1080p",
+        "w": 1920
+      },
+      {
+        "fits_gbe": false,
+        "fps": 10,
+        "gbe_frac": 1.991,
+        "h": 2160,
+        "mb_per_s": 248.83,
+        "mpx": 8.29,
+        "resolution": "4K",
+        "w": 3840
+      },
+      {
+        "fits_gbe": false,
+        "fps": 30,
+        "gbe_frac": 5.972,
+        "h": 2160,
+        "mb_per_s": 746.5,
+        "mpx": 8.29,
+        "resolution": "4K",
+        "w": 3840
+      },
+      {
+        "fits_gbe": false,
+        "fps": 60,
+        "gbe_frac": 11.944,
+        "h": 2160,
+        "mb_per_s": 1492.99,
+        "mpx": 8.29,
+        "resolution": "4K",
+        "w": 3840
+      }
+    ],
+    "transports": [
+      {
+        "copies_per_message": 4,
+        "link_mb_per_s": 186.62,
+        "mem_bw_mb_per_s": 746.5,
+        "note": "\u5e8f\u5217\u5316\u3001\u5185\u6838\u5199\u3001\u5185\u6838\u8bfb\u3001\u53cd\u5e8f\u5217\u5316",
+        "transport": "pipe_pickle"
+      },
+      {
+        "copies_per_message": 2,
+        "link_mb_per_s": 186.62,
+        "mem_bw_mb_per_s": 373.25,
+        "note": "\u5185\u6838\u5199\u3001\u5185\u6838\u8bfb",
+        "transport": "pipe_raw"
+      },
+      {
+        "copies_per_message": 1,
+        "link_mb_per_s": 186.62,
+        "mem_bw_mb_per_s": 186.62,
+        "note": "\u751f\u4ea7\u8005\u5199\u8fdb\u5171\u4eab\u7f13\u51b2\u533a\uff1b\u6d88\u8d39\u8005\u5c31\u5730\u8bfb\uff0c\u4e0d\u518d\u62f7\u8d1d",
+        "transport": "shm_handle"
+      },
+      {
+        "copies_per_message": 0,
+        "link_mb_per_s": 186.62,
+        "mem_bw_mb_per_s": 0.0,
+        "note": "\u7f13\u51b2\u533a\u7531\u751f\u4ea7\u8005\u5199\u6ee1\u5e76\u79fb\u4ea4\u6240\u6709\u6743",
+        "transport": "loaned"
+      }
+    ]
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "block": "map/05-deployment/01-quantization",
+  "generated_at_unix": 1790611260,
+  "git_rev": "uncommitted",
+  "metrics": {
+    "action_mae_int4_pct": 21.926431,
+    "action_mae_int4_per_tensor_pct": 24.821339,
+    "action_mae_int4_weights_only_pct": 15.974243,
+    "action_mae_int8_pct": 1.228764,
+    "action_mae_int8_weights_only_pct": 0.920629,
+    "action_ref_std": 1.440417,
+    "activation_share_at_8bit": 1.335,
+    "ai_at_M1": 0.9995,
+    "ai_at_M4096": 1365.3333,
+    "bandwidth_gbs": 68.0,
+    "best_layer_at_4bit": 0,
+    "best_layer_int4_pct": 11.272165,
+    "decode_layer_ai": 0.9981,
+    "decode_layer_w8a8_speedup": 2.0,
+    "decode_speedup_across_bandwidth_octave": 0.0,
+    "decode_speedup_peak_ratio_1": 2.0,
+    "decode_speedup_peak_ratio_4": 2.0,
+    "error_growth_8_to_4_bit": 17.8,
+    "largest_layer_ms": 7.5162,
+    "layer_spread_at_4bit": 1.187,
+    "m_crossover_at_4x_bandwidth": 29.84,
+    "m_crossover_at_half_bandwidth": 265.84,
+    "m_crossover_fp16": 124.82,
+    "no_i8_core_speedup_at_M1": 0.6667,
+    "no_i8_core_speedup_at_M4096": 1.0,
+    "peak_fp16_tflops": 8.0,
+    "per_channel_gain_at_4bit": 1.554,
+    "prefill_layer_ai": 441.1077,
+    "prefill_layer_w8a8_speedup": 2.0,
+    "prefill_speedup_peak_ratio_1": 1.0,
+    "prefill_speedup_peak_ratio_4": 4.0,
+    "ridge_flops_per_byte": 117.6471,
+    "size_reduction_vs_fp16": 2.0,
+    "size_reduction_vs_fp32": 4.0,
+    "smallest_layer_us": 2.517,
+    "sweep_k": 4096,
+    "sweep_n": 4096,
+    "vla_layers": 5,
+    "vla_max_ai": 441.1077,
+    "vla_memory_bound_layers": 3,
+    "vla_min_ai": 0.9981,
+    "w4a16_gain_decay": 3.994,
+    "w4a16_speedup_at_M1": 3.9942,
+    "w4a16_speedup_at_M4096": 1.0,
+    "w8a8_flat": true,
+    "w8a8_speedup_max": 2.0,
+    "w8a8_speedup_min": 2.0,
+    "w8a8_speedup_spread": 0.0,
+    "weight_bytes_fp16_mb": 123.273,
+    "weight_bytes_fp32_mb": 246.546,
+    "weight_bytes_int8_mb": 61.637,
+    "worst_layer_at_4bit": 1,
+    "worst_layer_int4_pct": 13.376004
+  },
+  "notes": "Pure arithmetic roofline plus a seeded quantization of a synthetic action head. No timing, no device: the machine is a declared assumption (8 TFLOP/s FP16, 68 GB/s).",
+  "numpy": "2.5.3",
+  "python": "3.12.10",
+  "seed": 0,
+  "tables": {
+    "bandwidth_sweep": [
+      {
+        "bandwidth_gbs": 34.0,
+        "decode_speedup": 2.0,
+        "m_crossover": 265.84,
+        "ridge_flops_per_byte": 235.2941
+      },
+      {
+        "bandwidth_gbs": 68.0,
+        "decode_speedup": 2.0,
+        "m_crossover": 124.82,
+        "ridge_flops_per_byte": 117.6471
+      },
+      {
+        "bandwidth_gbs": 136.0,
+        "decode_speedup": 2.0,
+        "m_crossover": 60.56,
+        "ridge_flops_per_byte": 58.8235
+      },
+      {
+        "bandwidth_gbs": 272.0,
+        "decode_speedup": 2.0,
+        "m_crossover": 29.84,
+        "ridge_flops_per_byte": 29.4118
+      }
+    ],
+    "batch_sweep": [
+      {
+        "M": 1,
+        "ai": 0.9995,
+        "bound": "memory",
+        "fp16_ms": 0.493688,
+        "no_i8_core_speedup": 0.6667,
+        "w4a16_ms": 0.123603,
+        "w4a16_speedup": 3.9942,
+        "w8a8_ms": 0.246844,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "M": 2,
+        "ai": 1.998,
+        "bound": "memory",
+        "fp16_ms": 0.493929,
+        "no_i8_core_speedup": 0.6667,
+        "w4a16_ms": 0.123844,
+        "w4a16_speedup": 3.9883,
+        "w8a8_ms": 0.246965,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "M": 4,
+        "ai": 3.9922,
+        "bound": "memory",
+        "fp16_ms": 0.494411,
+        "no_i8_core_speedup": 0.6667,
+        "w4a16_ms": 0.124326,
+        "w4a16_speedup": 3.9767,
+        "w8a8_ms": 0.247206,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "M": 8,
+        "ai": 7.9689,
+        "bound": "memory",
+        "fp16_ms": 0.495375,
+        "no_i8_core_speedup": 0.6667,
+        "w4a16_ms": 0.125289,
+        "w4a16_speedup": 3.9538,
+        "w8a8_ms": 0.247688,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "M": 16,
+        "ai": 15.876,
+        "bound": "memory",
+        "fp16_ms": 0.497303,
+        "no_i8_core_speedup": 0.6667,
+        "w4a16_ms": 0.127217,
+        "w4a16_speedup": 3.9091,
+        "w8a8_ms": 0.248651,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "M": 32,
+        "ai": 31.5077,
+        "bound": "memory",
+        "fp16_ms": 0.501158,
+        "no_i8_core_speedup": 0.6667,
+        "w4a16_ms": 0.134218,
+        "w4a16_speedup": 3.7339,
+        "w8a8_ms": 0.250579,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "M": 64,
+        "ai": 62.0606,
+        "bound": "memory",
+        "fp16_ms": 0.508868,
+        "no_i8_core_speedup": 0.6667,
+        "w4a16_ms": 0.268435,
+        "w4a16_speedup": 1.8957,
+        "w8a8_ms": 0.254434,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "M": 128,
+        "ai": 120.4706,
+        "bound": "compute",
+        "fp16_ms": 0.536871,
+        "no_i8_core_speedup": 0.6827,
+        "w4a16_ms": 0.536871,
+        "w4a16_speedup": 1.0,
+        "w8a8_ms": 0.268435,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "M": 256,
+        "ai": 227.5556,
+        "bound": "compute",
+        "fp16_ms": 1.073742,
+        "no_i8_core_speedup": 1.0,
+        "w4a16_ms": 1.073742,
+        "w4a16_speedup": 1.0,
+        "w8a8_ms": 0.536871,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "M": 512,
+        "ai": 409.6,
+        "bound": "compute",
+        "fp16_ms": 2.147484,
+        "no_i8_core_speedup": 1.0,
+        "w4a16_ms": 2.147484,
+        "w4a16_speedup": 1.0,
+        "w8a8_ms": 1.073742,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "M": 1024,
+        "ai": 682.6667,
+        "bound": "compute",
+        "fp16_ms": 4.294967,
+        "no_i8_core_speedup": 1.0,
+        "w4a16_ms": 4.294967,
+        "w4a16_speedup": 1.0,
+        "w8a8_ms": 2.147484,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "M": 2048,
+        "ai": 1024.0,
+        "bound": "compute",
+        "fp16_ms": 8.589935,
+        "no_i8_core_speedup": 1.0,
+        "w4a16_ms": 8.589935,
+        "w4a16_speedup": 1.0,
+        "w8a8_ms": 4.294967,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "M": 4096,
+        "ai": 1365.3333,
+        "bound": "compute",
+        "fp16_ms": 17.179869,
+        "no_i8_core_speedup": 1.0,
+        "w4a16_ms": 17.179869,
+        "w4a16_speedup": 1.0,
+        "w8a8_ms": 8.589935,
+        "w8a8_speedup": 2.0
+      }
+    ],
+    "error_bits": [
+      {
+        "activation_share": 1.335,
+        "bits": 8,
+        "w_per_channel_pct": 0.920629,
+        "w_per_tensor_pct": 1.236087,
+        "w_plus_a_pct": 1.228764
+      },
+      {
+        "activation_share": 1.376,
+        "bits": 6,
+        "w_per_channel_pct": 3.682485,
+        "w_per_tensor_pct": 5.305473,
+        "w_plus_a_pct": 5.066067
+      },
+      {
+        "activation_share": 1.368,
+        "bits": 5,
+        "w_per_channel_pct": 7.445012,
+        "w_per_tensor_pct": 10.884751,
+        "w_plus_a_pct": 10.184662
+      },
+      {
+        "activation_share": 1.373,
+        "bits": 4,
+        "w_per_channel_pct": 15.974243,
+        "w_per_tensor_pct": 24.821339,
+        "w_plus_a_pct": 21.926431
+      },
+      {
+        "activation_share": 1.504,
+        "bits": 3,
+        "w_per_channel_pct": 35.955165,
+        "w_per_tensor_pct": 53.279717,
+        "w_plus_a_pct": 54.059839
+      },
+      {
+        "activation_share": 1.47,
+        "bits": 2,
+        "w_per_channel_pct": 97.799314,
+        "w_per_tensor_pct": 86.165731,
+        "w_plus_a_pct": 143.752854
+      }
+    ],
+    "layer_sensitivity": [
+      {
+        "fan_in": 64,
+        "fan_out": 256,
+        "int4_pct": 11.272165,
+        "int8_pct": 0.650888,
+        "layer": 0
+      },
+      {
+        "fan_in": 256,
+        "fan_out": 256,
+        "int4_pct": 13.376004,
+        "int8_pct": 0.713555,
+        "layer": 1
+      },
+      {
+        "fan_in": 256,
+        "fan_out": 14,
+        "int4_pct": 13.157047,
+        "int8_pct": 0.700204,
+        "layer": 2
+      }
+    ],
+    "peak_ratio_sweep": [
+      {
+        "decode_M1_speedup": 2.0,
+        "decode_bound": "memory",
+        "peak_ratio": 1.0,
+        "prefill_M512_speedup": 1.0,
+        "prefill_bound": "compute"
+      },
+      {
+        "decode_M1_speedup": 2.0,
+        "decode_bound": "memory",
+        "peak_ratio": 1.5,
+        "prefill_M512_speedup": 1.5,
+        "prefill_bound": "compute"
+      },
+      {
+        "decode_M1_speedup": 2.0,
+        "decode_bound": "memory",
+        "peak_ratio": 2.0,
+        "prefill_M512_speedup": 2.0,
+        "prefill_bound": "compute"
+      },
+      {
+        "decode_M1_speedup": 2.0,
+        "decode_bound": "memory",
+        "peak_ratio": 4.0,
+        "prefill_M512_speedup": 4.0,
+        "prefill_bound": "compute"
+      }
+    ],
+    "schemes": [
+      {
+        "a_bytes": 1.0,
+        "dequant_passes": 0.0,
+        "peak_ratio": 2.0,
+        "scheme": "w8a8",
+        "w_bytes": 1.0
+      },
+      {
+        "a_bytes": 2.0,
+        "dequant_passes": 0.0,
+        "peak_ratio": 1.0,
+        "scheme": "w4a16",
+        "w_bytes": 0.5
+      },
+      {
+        "a_bytes": 1.0,
+        "dequant_passes": 2.0,
+        "peak_ratio": 1.0,
+        "scheme": "w8a8_no_i8_core",
+        "w_bytes": 1.0
+      }
+    ],
+    "vla_layers": [
+      {
+        "K": 768,
+        "M": 1024,
+        "N": 1024,
+        "ai": 307.2,
+        "bound": "compute",
+        "fp16_ms": 0.201327,
+        "layer": "vision patch embed",
+        "w4a16_speedup": 1.0,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "K": 4096,
+        "M": 512,
+        "N": 14336,
+        "ai": 441.1077,
+        "bound": "compute",
+        "fp16_ms": 7.516193,
+        "layer": "vlm prefill ffn",
+        "w4a16_speedup": 1.0,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "K": 1024,
+        "M": 50,
+        "N": 1024,
+        "ai": 45.5516,
+        "bound": "memory",
+        "fp16_ms": 0.033852,
+        "layer": "action expert ffn, chunk",
+        "w4a16_speedup": 2.5827,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "K": 1024,
+        "M": 1,
+        "N": 1024,
+        "ai": 0.9981,
+        "bound": "memory",
+        "fp16_ms": 0.030901,
+        "layer": "action expert ffn, one step",
+        "w4a16_speedup": 3.9767,
+        "w8a8_speedup": 2.0
+      },
+      {
+        "K": 1024,
+        "M": 50,
+        "N": 32,
+        "ai": 19.1473,
+        "bound": "memory",
+        "fp16_ms": 0.002517,
+        "layer": "action out proj",
+        "w4a16_speedup": 1.4029,
+        "w8a8_speedup": 2.0
+      }
+    ]
+  }
+}

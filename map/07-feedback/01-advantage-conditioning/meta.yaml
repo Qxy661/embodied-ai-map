@@ -1,0 +1,16 @@
+block: 07-feedback/01-advantage-conditioning
+title: 优势条件化与过滤的代价
+tier: primary          # primary | secondary | watch
+engagement: self       # self | depend | adapter | cite
+ring: 07-feedback
+
+# Which settled convention this block leans on, if any.
+standards:
+  - "AWR / advantage-weighted regression 的指数优势权重 exp(A / beta)"
+  - "filtered BC（只保留成功轨迹）作为数据筛选的对照"
+  - "RECAP 一类的 advantage-conditioned 数据加权"
+
+# Numbers that appear in README prose but are structural, not results.
+literals:
+  - 1      # "权重都是 1"、权重表里的 w = 1，是定义不是测量
+  - 0      # 权重下限的端点，同上

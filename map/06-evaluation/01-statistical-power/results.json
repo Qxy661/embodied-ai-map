@@ -1,0 +1,70 @@
+{
+  "block": "map/06-evaluation/01-statistical-power",
+  "generated_at_unix": 1790611261,
+  "git_rev": "uncommitted",
+  "metrics": {
+    "ci_halfwidth_pp_at_N20": 18.67,
+    "ci_halfwidth_pp_at_N500": 4.0,
+    "ci_hi_pct_p70_at_N20": 85.5,
+    "ci_lo_pct_p70_at_N20": 48.1,
+    "n_needed_for_80pct_power": 45,
+    "p_a": 0.7,
+    "p_b": 0.92,
+    "power_at_N100": 0.9861,
+    "power_at_N20": 0.4395,
+    "power_at_N500": 1.0,
+    "power_target": 0.8,
+    "simulated_experiments_per_cell": 40000,
+    "true_gap_pp": 22.0
+  },
+  "notes": "Power is the simulated rejection rate of a pooled two-proportion z-test over 40000 draws per cell. CI half-width is Wilson.",
+  "numpy": "2.5.3",
+  "python": "3.12.10",
+  "seed": 0,
+  "tables": {
+    "sweep": [
+      {
+        "N": 10,
+        "ci_halfwidth_pp_p70": 24.77,
+        "ci_halfwidth_pp_p92": 19.31,
+        "power": 0.1739
+      },
+      {
+        "N": 20,
+        "ci_halfwidth_pp_p70": 18.67,
+        "ci_halfwidth_pp_p92": 13.66,
+        "power": 0.4395
+      },
+      {
+        "N": 30,
+        "ci_halfwidth_pp_p70": 15.61,
+        "ci_halfwidth_pp_p92": 9.74,
+        "power": 0.6026
+      },
+      {
+        "N": 50,
+        "ci_halfwidth_pp_p70": 12.32,
+        "ci_halfwidth_pp_p92": 7.84,
+        "power": 0.8373
+      },
+      {
+        "N": 100,
+        "ci_halfwidth_pp_p70": 8.84,
+        "ci_halfwidth_pp_p92": 5.44,
+        "power": 0.9861
+      },
+      {
+        "N": 200,
+        "ci_halfwidth_pp_p70": 6.3,
+        "ci_halfwidth_pp_p92": 3.81,
+        "power": 1.0
+      },
+      {
+        "N": 500,
+        "ci_halfwidth_pp_p70": 4.0,
+        "ci_halfwidth_pp_p92": 2.39,
+        "power": 1.0
+      }
+    ]
+  }
+}
